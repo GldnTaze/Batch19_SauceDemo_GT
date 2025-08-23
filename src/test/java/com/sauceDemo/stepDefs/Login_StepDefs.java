@@ -4,7 +4,7 @@ import com.sauceDemo.pages.LoginPage;
 import com.sauceDemo.utilitis.ConfigurationReader;
 import com.sauceDemo.utilitis.Driver;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
+
 import io.cucumber.java.en.When;
 
 public class Login_StepDefs {
