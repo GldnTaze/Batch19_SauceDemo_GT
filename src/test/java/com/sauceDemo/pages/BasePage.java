@@ -28,12 +28,16 @@ public abstract class BasePage {
         return Driver.get().findElement(By.xpath("//span[text()='" + pageTitle + "']")).getText();
     }
 
-    public int getbasketNumber() {
+
+    public int getBasketNumber(){
         String basketNumberText = basketNumber.getText();
         return Integer.parseInt(basketNumberText);
     }
 
     public void nevigateToShopingCartPage() {
         shoppingCartLink.click();
+    }
+    public  void  navigateToNexWithRelatedButton(String buttonName){
+        Driver.get().findElement(By.id(buttonName)).click();
     }
 }

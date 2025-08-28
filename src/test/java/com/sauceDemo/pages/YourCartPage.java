@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class YourCartPage extends BasePage{
-    @FindBy(css = ".shopping_cart_link")
+    @FindBy(css = ".inventory_item_name")
     private List<WebElement> cartItems;
 
     public List<String> getCartItensText(){

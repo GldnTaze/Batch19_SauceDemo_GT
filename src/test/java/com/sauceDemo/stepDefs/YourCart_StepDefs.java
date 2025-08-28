@@ -2,6 +2,7 @@ package com.sauceDemo.stepDefs;
 
 import com.sauceDemo.pages.YourCartPage;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 import java.util.List;
@@ -14,6 +15,11 @@ public class YourCart_StepDefs {
     public void the_user_should_be_able_to_see_the_following_items_on_the_page_that_added_before(List<String>expectedItems) {
       List<String> actualItems=yourCartPage.getCartItensText();
       Assert.assertEquals(expectedItems,actualItems);
+       //Assert.assertTrue(actualItems.containsAll(expectedItems));
+    }
+    @When("The user navigates to next page with related button: {string}")
+    public void the_user_navigates_to_next_page_with_related_button(String buttonName) {
+        yourCartPage.navigateToNexWithRelatedButton(buttonName);
 
     }
 }

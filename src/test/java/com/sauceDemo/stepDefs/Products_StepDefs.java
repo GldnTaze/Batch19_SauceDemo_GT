@@ -36,9 +36,9 @@ public class Products_StepDefs {
     }
 
     @Then("The number on the basket icon should show added item quantity {int}")
-    public void the_number_on_the_basket_icon_should_show_added_item_quantity(Integer expectedNumber) {
-        int actualNumber = productsPage.getbasketNumber();
-        //  Assert.assertEquals(expectedNumber,actualNumber);
+    public void the_number_on_the_basket_icon_should_show_added_item_quantity(int expectedNumber) {
+        int actualNumber = productsPage.getBasketNumber();
+         Assert.assertEquals(expectedNumber,actualNumber);
 
     }
 

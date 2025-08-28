@@ -1,5 +1,6 @@
 package com.sauceDemo.pages;
 
+import com.sauceDemo.utilitis.BrowserUtils;
 import com.sauceDemo.utilitis.Driver;
 
 import org.openqa.selenium.By;
@@ -25,6 +26,7 @@ public class ProductsPage extends BasePage {
     }
 
     public void addItemWithName(String itemName) {
+        BrowserUtils.waitFor(3);
         Driver.get().findElement(By.
                 xpath("//*[.='" + itemName + "']/ancestor::*[@*='inventory_item_description']//button")).click();
     }
